@@ -1,0 +1,11 @@
+#businessStatementMobile {
+    margin-top: 10%;
+}
+
+@media screen and (min-width: 738px) {
+
+#businessStatementMobile {
+    display: none;
+}
+
+}

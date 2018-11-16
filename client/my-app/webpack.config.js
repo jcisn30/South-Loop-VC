@@ -1,10 +1,13 @@
 const webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const port = process.env.PORT
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+     vendor: ['bootstrap'],
+    app: './src/index.js',
+  },
   module: {
     rules: [
        {
@@ -24,9 +27,20 @@ module.exports = {
               options: {
                 name: '[name].[ext]'
             }
-            }
+            
+            },
+            
          ]
-       }
+       },
+       {
+            test: /\.scss$/,
+            use: [
+                "style-loader", // creates style nodes from JS strings
+                "css-loader", // translates CSS into CommonJS
+                "sass-loader" // compiles Sass to CSS, using Node Sass by default
+            ]
+        }
+      
  
     ]
   },
@@ -43,8 +57,11 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
       new HtmlWebpackPlugin({ 
+         
       template: './public/index.html', 
-      filename: './index.html' 
+      favicon: 'public/favicon.ico',
+      manifest: 'public/manifest.json'
+      
     }),
      new webpack.ProvidePlugin({   
          $: 'jquery',
@@ -53,8 +70,24 @@ module.exports = {
           Tether: 'tether'
     })
   ],
+  
+    optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          chunks: 'initial',
+          test: 'vendor',
+          name: 'vendor',
+          enforce: true
+        }
+      }
+    }
+  },
+  
+  
   devServer: {
-    contentBase: './dist',
+    host: 'localhost',
+    port: port,
     historyApiFallback: true,
     hot: true
   }

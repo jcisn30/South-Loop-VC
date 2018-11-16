@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Header.css';
+import './Header.scss';
 import logo from './images/slvclogo.png';
 import {connect} from "react-redux";
 import $ from 'jquery'
@@ -16,6 +16,8 @@ handleToggle = () => {
     $(this).addClass('active');
      })
 }
+
+
     
   render() {
     
@@ -29,7 +31,7 @@ handleToggle = () => {
     <div className="container">
         <a className="navbar-brand" href="#">
             <img src="slvclogo.png" width="140" height="70" alt="Logo" />
-            <p id="logoName">South Loop Veterinary Clinic</p>
+            <p id="logoName">{this.props.businessName}</p>
        </a>
 
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +41,7 @@ handleToggle = () => {
         <div className="collapse navbar-collapse flex-column align-items-end" id="navbarCollapse">
              
             <div className="navbar-nav mb-lg-0">
-                <span className="navbar-text" id="address">41960 NE-2 Ravenna, Nebraska 68869 <a href="tel:+1-402-853-2628">(308) 452-4409</a></span>
+                <span className="navbar-text" id="address">41960 NE-2 Ravenna, Nebraska 68869, <a href="tel:+1-402-853-2628">(308) 452-4409</a></span>
                 <a className="nav-link" id="specials" href="#" data-toggle="tooltip" data-placement="top" title="Click here to see special deals!" data-toggle="modal" data-target="#specialsModal">Monthly Specials</a>
             </div>
             
@@ -108,21 +110,21 @@ handleToggle = () => {
 
 
 {/* modal that displays monthly specials */}
-<div class="modal fade" id="specialsModal" tabindex="-1" role="dialog" aria-labelledby="specialsModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<div className="modal fade" id="specialsModal" tabIndex="-1" role="dialog" aria-labelledby="specialsModalLabel" aria-hidden="true">
+  <div className="modal-dialog" role="document">
+    <div className="modal-content">
+      <div className="modal-header">
+        <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div className="modal-body">
         ...
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div className="modal-footer">
+        <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" className="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

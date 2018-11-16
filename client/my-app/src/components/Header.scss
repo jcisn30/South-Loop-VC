@@ -1,11 +1,13 @@
 
 .navbar{
-    background-color: transparent !important;
+    background-color: white !important;
     font-family: 'Gochi Hand', cursive;
+    
 }
 
 .navbar-brand {
-    margin-left: 10%;
+    float: left;
+    
 }
 
 #logoName {
@@ -21,7 +23,16 @@
 }
 
 #specials {
-    margin-left: 9%;
+    margin-left: 10%;
 }
 
 
+@media screen and (max-width: 1024px) {
+    .navbar-brand {
+    margin-left: 7%;
+    }
+    
+    .mb-lg-0, .my-lg-0 {
+        display: none;
+    }
+}
