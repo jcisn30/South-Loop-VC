@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,SAAU;EACV,gBAAgB,EAAE,8BAA8B;EAChD,eAAe,EAAE,KAAK;EACtB,MAAM,EAAE,KAAK;EACb,WAAW,EAAE,EAAE;EACf,YAAY,EAAE,EAAE",
+"mappings": "AAAA,SAAU;EACV,gBAAgB,EAAE,0BAA0B;EAC5C,eAAe,EAAE,KAAK;EACtB,MAAM,EAAE,KAAK;EACb,WAAW,EAAE,EAAE;EACf,YAAY,EAAE,EAAE",
 "sources": ["AboutHomePage.scss"],
 "names": [],
 "file": "AboutHomePage.css"

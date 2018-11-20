@@ -10,6 +10,7 @@ import {BrowserRouter as Router} from "react-router-dom";
 import 'jquery';
 import 'bootstrap/dist/js/bootstrap';
 import Main from "./Main";
+import Footer from "../components/Footer.js";
 
 
 const store = configureStore();
@@ -26,6 +27,7 @@ const App = () => (
       <div className="container-fluid">
         <Header businessName={businessName} />
         <Main  />
+        <Footer />
      </div>
     </Router>
     

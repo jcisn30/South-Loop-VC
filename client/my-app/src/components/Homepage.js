@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import './Homepage.scss';
 import horsePic from './images/horsePic.jpg';
 import dogPic from './images/dogPic.jpg';
+import dogPic2 from './images/dog2.png';
 import cattlePic from './images/cattlePic.jpg';
-import cattlePic1 from './images/cattlePic1.jpg'
+import cattlePic1 from './images/cattlePic1.jpg';
+import catPic from './images/catPic.jpg';
 
 import Carousel from "./Carousel";
 import BusinessStatement from "./BusinessStatement";
