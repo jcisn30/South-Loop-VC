@@ -3,11 +3,15 @@
 
 .speech-bubble {
   position: relative;
-  background: red;
-  border-radius: .4em;
+  background: #ccc3b3;
+  border-radius: .8em;
   height: 100px;
-  width: 350px;
-  margin: 3% 0 3% 10%; }
+  width: 550px;
+  margin: 3% 0 -10% 20%;
+  font-family: "Gochi Hand", cursive;
+  padding-left: 2%;
+  padding-top: 2% "";
+  font-size: 22px; }
 
 .speech-bubble:after {
   content: '';
@@ -17,10 +21,17 @@
   width: 0;
   height: 0;
   border: 20px solid transparent;
-  border-top-color: red;
+  border-top-color: #ccc3b3;
   border-bottom: 0;
   border-left: 0;
   margin-left: -10px;
   margin-bottom: -20px; }
+
+#serviesPara {
+  float: right;
+  margin-top: 13%; }
+
+#servicesStatement {
+  font-size: 14px; }
 
 /*# sourceMappingURL=ServicesHomePage.css.map */

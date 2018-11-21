@@ -1,0 +1,27 @@
+.navbar {
+  background-color: white !important;
+  font-family: 'Gochi Hand', cursive; }
+
+.navbar-brand {
+  float: left; }
+
+#logoName {
+  margin-left: -15%; }
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  color: red; }
+
+#address {
+  margin-left: -10%; }
+
+#specials {
+  margin-left: 10%; }
+
+@media screen and (max-width: 1024px) {
+  .navbar-brand {
+    margin-left: 7%; }
+
+  .mb-lg-0, .my-lg-0 {
+    display: none; } }
+
+/*# sourceMappingURL=Header.css.map */
