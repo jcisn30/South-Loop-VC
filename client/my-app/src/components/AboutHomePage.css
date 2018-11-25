@@ -1,8 +1,15 @@
 #aboutPic {
   background-image: url("./images/catPic.jpg");
   background-size: cover;
-  height: 200px;
+  height: 400px;
   margin-left: 5%;
   margin-right: 5%; }
+
+#aboutSecOne {
+  float: right;
+  margin-left: 50%; }
+
+#aboutHeader {
+  text-decoration: underline; }
 
 /*# sourceMappingURL=AboutHomePage.css.map */
